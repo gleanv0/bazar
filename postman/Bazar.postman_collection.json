@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "e6c4cb29-da55-4dc3-ac45-8001dc605f77",
+		"name": "Bazar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31497995"
+	},
+	"item": [
+		{
+			"name": "Leer Ventas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/venta/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"venta",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/cliente/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/producto/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer Venta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/venta?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"venta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/cliente?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer Producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/producto?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Gaseosa\",\r\n    \"marca\": \"Coca-Cola\",\r\n    \"costo\": 2999.99,\r\n    \"cantidadDisponible\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/producto",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\",\r\n    \"dni\": \"45678901\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"2024-11-08\",\r\n    \"clienteId\": 1,\r\n    \"productos\": [3, 5, 12, 15, 20]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/venta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"venta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Productos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"nombre\": \"Gaseosa\",\r\n        \"marca\": \"Coca-Cola\",\r\n        \"costo\": 2999.99,\r\n        \"cantidadDisponible\": 10\r\n    },\r\n    {\r\n        \"nombre\": \"Agua Mineral\",\r\n        \"marca\": \"Nestlé\",\r\n        \"costo\": 1500.00,\r\n        \"cantidadDisponible\": 25\r\n    },\r\n    {\r\n        \"nombre\": \"Café\",\r\n        \"marca\": \"Nescafé\",\r\n        \"costo\": 5000.00,\r\n        \"cantidadDisponible\": 2\r\n    },\r\n    {\r\n        \"nombre\": \"Té Verde\",\r\n        \"marca\": \"Lipton\",\r\n        \"costo\": 2000.00,\r\n        \"cantidadDisponible\": 18\r\n    },\r\n    {\r\n        \"nombre\": \"Jugo de Naranja\",\r\n        \"marca\": \"Del Valle\",\r\n        \"costo\": 3500.00,\r\n        \"cantidadDisponible\": 8\r\n    },\r\n    {\r\n        \"nombre\": \"Galletas\",\r\n        \"marca\": \"Oreo\",\r\n        \"costo\": 2500.00,\r\n        \"cantidadDisponible\": 30\r\n    },\r\n    {\r\n        \"nombre\": \"Leche\",\r\n        \"marca\": \"Alpina\",\r\n        \"costo\": 4000.00,\r\n        \"cantidadDisponible\": 20\r\n    },\r\n    {\r\n        \"nombre\": \"Yogur\",\r\n        \"marca\": \"Yoplait\",\r\n        \"costo\": 3000.00,\r\n        \"cantidadDisponible\": 1\r\n    },\r\n    {\r\n        \"nombre\": \"Pan de Molde\",\r\n        \"marca\": \"Bimbo\",\r\n        \"costo\": 3500.00,\r\n        \"cantidadDisponible\": 15\r\n    },\r\n    {\r\n        \"nombre\": \"Mantequilla\",\r\n        \"marca\": \"Laive\",\r\n        \"costo\": 2500.00,\r\n        \"cantidadDisponible\": 12\r\n    },\r\n    {\r\n        \"nombre\": \"Queso\",\r\n        \"marca\": \"Kraft\",\r\n        \"costo\": 6000.00,\r\n        \"cantidadDisponible\": 10\r\n    },\r\n    {\r\n        \"nombre\": \"Jamón\",\r\n        \"marca\": \"Plumrose\",\r\n        \"costo\": 5500.00,\r\n        \"cantidadDisponible\": 3\r\n    },\r\n    {\r\n        \"nombre\": \"Chocolate\",\r\n        \"marca\": \"Hershey's\",\r\n        \"costo\": 1500.00,\r\n        \"cantidadDisponible\": 25\r\n    },\r\n    {\r\n        \"nombre\": \"Cereal\",\r\n        \"marca\": \"Kellogg's\",\r\n        \"costo\": 5000.00,\r\n        \"cantidadDisponible\": 10\r\n    },\r\n    {\r\n        \"nombre\": \"Aceite de Oliva\",\r\n        \"marca\": \"Carbonell\",\r\n        \"costo\": 8000.00,\r\n        \"cantidadDisponible\": 5\r\n    },\r\n    {\r\n        \"nombre\": \"Pasta\",\r\n        \"marca\": \"Barilla\",\r\n        \"costo\": 4500.00,\r\n        \"cantidadDisponible\": 20\r\n    },\r\n    {\r\n        \"nombre\": \"Azúcar\",\r\n        \"marca\": \"Ledesma\",\r\n        \"costo\": 3000.00,\r\n        \"cantidadDisponible\": 28\r\n    },\r\n    {\r\n        \"nombre\": \"Arroz\",\r\n        \"marca\": \"Diana\",\r\n        \"costo\": 3500.00,\r\n        \"cantidadDisponible\": 4\r\n    },\r\n    {\r\n        \"nombre\": \"Atún\",\r\n        \"marca\": \"Van Camps\",\r\n        \"costo\": 7000.00,\r\n        \"cantidadDisponible\": 10\r\n    },\r\n    {\r\n        \"nombre\": \"Mayonesa\",\r\n        \"marca\": \"Hellmann's\",\r\n        \"costo\": 3200.00,\r\n        \"cantidadDisponible\": 20\r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/producto/multiple",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"multiple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Venta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/venta/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"venta",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/cliente/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/producto/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stock Insuficiente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/producto/stock_insuficiente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"stock_insuficiente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos en Venta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/venta/productos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"venta",
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ventas en Fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/venta/fecha?fecha=2024-11-08",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"venta",
+						"fecha"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2024-11-08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mayor Venta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/venta/mayor_venta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"venta",
+						"mayor_venta"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
